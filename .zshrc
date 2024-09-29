@@ -73,6 +73,7 @@ ZSH_THEME="af-magic"
 plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source <(fzf)
 
 # User configuration
 
@@ -109,8 +110,11 @@ alias c="google-chrome"
 alias l="ls -CF"
 alias xa="xrandr --auto"
 alias x2="xrandr --output HDMI-1 --auto --above eDP-1"
-alias bluech="bluetoothctl connect CC:98:8B:30:C8:5D"
-alias blued="bluetoothctl disconnect" 
+alias blue="bluetoothctl"
+alias bch="bluetoothctl connect CC:98:8B:30:C8:5D"
+alias ba="bluetoothctl connect EC:73:79:39:A0:B3"
+alias bd="bluetoothctl disconnect" 
+alias phd="cd ~/Documents/personal/phd_applications"
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
